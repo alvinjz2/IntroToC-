@@ -1,11 +1,11 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std
+using namespace std;
 
 int main()
 {
 	cout << "Enter name: ";
 	string name;
-	cin >> string;
+	cin >> name;
 }
