@@ -9,7 +9,6 @@ int main()
 {
 	string name = "???\n";
 	cout << name;
-	//title of game in fancy letters
-	//think of a good title
+	//title of game in fancy letters, imagine
 	return 0;
 }
