@@ -7,8 +7,10 @@ using namespace std;
 
 int main()
 {
-	string name = "???\n";
-	cout << name;
-	//title of game in fancy letters, imagine
+	int counter = 0;
+	cout << "---------";
+	cout << "|        |";
+	string str;
+	cin >> str;
 	return 0;
 }
