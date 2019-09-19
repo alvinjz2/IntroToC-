@@ -5,9 +5,11 @@ using namespace std;
 
 int main()
 {
-	cout << "Enter name: ";
-	string name;
-	cin >> name;
+	const int test;
+	cout << test << endl;
 	string foo = "This " "is " "weird " "but " "works";
 	cout << foo << endl;
+	const double BAR = 3.14159265;
+	cout << setprecision(9) << BAR << endl;
+	cout << BAR << endl;
 }
