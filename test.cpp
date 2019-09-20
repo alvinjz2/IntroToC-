@@ -5,14 +5,38 @@ using namespace std;
 
 int main()
 {
-	const int test;
-	cout << test << endl;
-	string foo = "This " "is " "weird " "but " "works";
-	cout << foo << endl;
-	const double BAR = 3.14159265;
-	cout << setprecision(9) << BAR << endl;
-	cout << BAR << endl;
+    // const double BAR = 3.14159265;
+    // cout << setprecision(9) << BAR << endl;
+    // cout << BAR << endl;
+
+    string a = "apple";
+    string b = "banana";
+    bool c = a < b;
+    cout << c << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*  
     _        _    _      _      ____    ____
