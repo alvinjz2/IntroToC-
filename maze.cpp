@@ -9,26 +9,42 @@ using namespace std;
 namespace player_board
 {
 	char maze[9][9];
-		for (int i = 0; i < 9; i++) 
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
 		{
-			for (int j = 0; j < 9; j++)
-			{
-				maze[i][j] = '0';
-			}
+			maze[i][j] = '0';
 		}
+	}
 
-		for (int i = 0; i < 9; i++) 
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
 		{
-			for (int j = 0; j < 9; j++)
-			{
-				cout << maze[i][j] << " ";
-			}
-			cout << endl;
+			cout << maze[i][j] << " ";
 		}
+		cout << endl;
+	}
 }
 namespace dev_board
 {
+	char maze[9][9];
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			maze[i][j] = '0';
+		}
+	}
 
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			cout << maze[i][j] << " ";
+		}
+		cout << endl;
+	}
 }
 int main()
 {
