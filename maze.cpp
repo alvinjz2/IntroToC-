@@ -23,6 +23,25 @@ int main()
 	usleep(100000);
 	cout << endl;
 	return 0;
+
+	char maze[9][9];
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			maze[i][j] = '0';
+		}
+	}
+	cout << sizeof(maze) << endl;
+
+	for (int i = 0; i < 9; i++) 
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			cout << maze[i][j];
+		}
+		cout << endl;
+	}
 }
 
 
