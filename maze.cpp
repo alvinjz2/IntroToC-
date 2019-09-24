@@ -11,46 +11,37 @@ namespace player_board
 {
 	void generate_maze()
 	{
-	char maze[9][9];
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
+		char maze[8][9];
+		for (int i = 0; i < 8; i++) 
 		{
-			maze[i][j] = '0';
+			for (int j = 0; j < 9; j++)
+			{
+				maze[i][j] = '0';
+			}
 		}
-	}
 
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
+		for (int i = 0; i < 8; i++) 
 		{
-			cout << maze[i][j] << " ";
+			for (int j = 0; j < 9; j++)
+			{
+				cout << maze[i][j] << " ";
+			}
+			cout << endl;
 		}
-		cout << endl;
-	}
 	}
 }
 namespace dev_board
 {
 	void generate_maze()
 	{
-	char maze[9][9];
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
+		char maze[9][9];
+		for (int i = 0; i < 9; i++) 
 		{
-			maze[i][j] = '0';
+			for (int j = 0; j < 9; j++)
+			{
+				maze[i][j] = '0';
+			}
 		}
-	}
-
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
-		{
-			cout << maze[i][j] << " ";
-		}
-		cout << endl;
-	}
 	}
 }
 
@@ -73,8 +64,6 @@ int main()
 	player_board::generate_maze();
 	dev_board::generate_maze();
 	
-
-
 
 
 	return 0;
