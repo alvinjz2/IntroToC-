@@ -6,8 +6,11 @@
 #include <unistd.h>
 
 using namespace std;
+
 namespace player_board
 {
+	void generate_maze()
+	{
 	char maze[9][9];
 	for (int i = 0; i < 9; i++) 
 	{
@@ -24,10 +27,13 @@ namespace player_board
 			cout << maze[i][j] << " ";
 		}
 		cout << endl;
+	}
 	}
 }
 namespace dev_board
 {
+	void generate_maze()
+	{
 	char maze[9][9];
 	for (int i = 0; i < 9; i++) 
 	{
@@ -45,7 +51,9 @@ namespace dev_board
 		}
 		cout << endl;
 	}
+	}
 }
+
 int main()
 {
 	int counter = 0; //keeps track of deaths
@@ -62,23 +70,9 @@ int main()
 	usleep(100000);
 	cout << endl;
 
-	char maze[9][9];
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
-		{
-			maze[i][j] = '0';
-		}
-	}
-
-	for (int i = 0; i < 9; i++) 
-	{
-		for (int j = 0; j < 9; j++)
-		{
-			cout << maze[i][j] << " ";
-		}
-		cout << endl;
-	}
+	player_board::generate_maze();
+	dev_board::generate_maze();
+	
 
 
 
