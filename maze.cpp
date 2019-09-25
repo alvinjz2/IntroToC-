@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
-#include <cstdlib>
 #include <string>
 #include <unistd.h>
 
@@ -35,13 +34,7 @@ namespace dev_board
     void generate_maze()
     {
         char maze[9][9];
-        for (int i = 0; i < 9; i++) 
-        {
-            for (int j = 0; j < 9; j++)
-            {
-                maze[i][j] = '0';
-            }
-        }
+        
     }
 }
 
@@ -64,6 +57,10 @@ int main()
     player_board::generate_maze();
     dev_board::generate_maze();
     
+    string command; 
+    cin >> command; 
+    
+
     return 0;
 }
 
