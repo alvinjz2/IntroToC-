@@ -59,6 +59,15 @@ namespace player_board
     	{
     		player_board::maze[player_y][player_x] = "";
     		player_board::maze[player_y+y][player_x+x] = "x";
+    		
+        for (int i = 0; i < 8; i++) 
+        {
+            for (int j = 0; j < 9; j++)
+            {
+                cout << maze[i][j] << " ";
+            }
+            cout << endl;
+        	}
     	}
     	else
     	{
@@ -89,7 +98,7 @@ int main()
     string command; 
     // Call the function 'generate_maze()' in the player_board and dev_board respectively.
     player_board::generate_maze();
-    
+   
     while(moves < 15)
     {
     	cin >> command;
@@ -129,6 +138,7 @@ int main()
     		// reset command to be nothing?
     		moves--; 
     	}
+
     }
     return 0;
 }
