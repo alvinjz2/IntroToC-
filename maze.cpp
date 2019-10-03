@@ -3,6 +3,7 @@
 #include <cmath>
 #include <string>
 #include <unistd.h>
+// #include <conio.h>
 
 using namespace std;
 
@@ -55,32 +56,45 @@ int main()
     usleep(100000);
     cout << endl;
 
-    string command; 
     player_board::generate_maze();
     dev_board::generate_maze();
+    cout << endl;
+    cout << "Use the WASD keys to move" << endl;
     
-    cin >> command; 
     // do some 'tolower()' function on 'command' to make it lowercase 
     while (moves > 0)
     {
-    	if(command == "up")
+        cout << "Up, down, left, or right: ";
+        char command; 
+        cin >> command; 
+        // command = getch();
+
+        if (cin.fail()) 
+        {
+            cout << "uSe OnLy ThE wAsD kEyS";
+            return 1;
+        }
+
+    	if (command == "w")
     	{
     		moves--;
     	}
-    	else if( command = "down")
+    	else if (command == "a")
     	{
     		moves--;
     	}
-    	else if(command = "left")
+    	else if (command == "s")
     	{
     		moves--;
     	}
-    	else if(commmand = "right")
+    	else if (command == "d")
     	{
     		moves--;
     	}
-    	else{
-    		cout << "Type only up, down, left, or right" << endl;
+    	else
+        {
+    		cout << "Type WASD: ";
+            cin >> command;
     	}
     }
     

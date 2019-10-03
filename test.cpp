@@ -1,18 +1,20 @@
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    // const double BAR = 3.14159265;
-    // cout << setprecision(9) << BAR << endl;
-    // cout << BAR << endl;
-
-    string a = "apple";
-    string b = "banana";
-    bool c = a < b;
-    cout << c << endl;
+    char tool;
+    cin >> tool;
+    switch(tool)
+    {
+        case 'A':
+        cout << tool << endl;
+        break;
+    }
+    
 }
 
 
