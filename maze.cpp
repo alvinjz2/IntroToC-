@@ -52,7 +52,7 @@ namespace player_board
         }
     }
    
-    void move_player()
+    void move_player(int y, int x)
     {
     	// happens ONLY if there isn't a wall/obstacle there.
     	if (not dev_board::collide_wall(y,x))
@@ -64,7 +64,7 @@ namespace player_board
         {
             for (int j = 0; j < 9; j++)
             {
-                cout << maze[i][j] << " ";
+                cout << player_board::maze[i][j] << " ";
             }
             cout << endl;
         	}
@@ -72,9 +72,18 @@ namespace player_board
     	else
     	{
     		player_board::maze[player_y+y][player_x+x] = "1";
+    		for (int i = 0; i < 8; i++) 
+        	{
+            for (int j = 0; j < 9; j++)
+            {
+                cout << player_board::maze[i][j] << " ";
+            }
+            cout << endl;
+        	}
+    	}
     	}
     }
-}
+
 
 int main()
 {
@@ -99,14 +108,14 @@ int main()
     // Call the function 'generate_maze()' in the player_board and dev_board respectively.
     player_board::generate_maze();
    
-    while(moves < 15)
+    while(moves > 0)
     {
     	cin >> command;
     	if(command == "w")
     	{
     		y = -1;
     		x = 0;
-    		player_board::move_player();
+    		player_board::move_player(y,x);
     		// do move forwards
     		// reset command to be nothing?
     		moves--; 
@@ -115,7 +124,7 @@ int main()
     	{
     		y = 0;
     		x = -1;
-    		player_board::move_player();
+    		player_board::move_player(y,x);
     		// do move forwards
     		// reset command to be nothing?
     		moves--; 
@@ -124,7 +133,7 @@ int main()
     	{
     		y = 1;
     		x = 0;
-    		player_board::move_player();
+    		player_board::move_player(y,x);
     		// do move forwards
     		// reset command to be nothing?
     		moves--; 
@@ -133,7 +142,7 @@ int main()
     	{
     		y = 0;
     		x = 1;
-    		player_board::move_player();
+    		player_board::move_player(y,x);
     		// do move forwards
     		// reset command to be nothing?
     		moves--; 
