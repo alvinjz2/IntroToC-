@@ -7,10 +7,10 @@
 using namespace std;
 int player_x = 8;
 int player_y = 8;
-char player_model = 'x';
+char player_model = 'P';
 int y,x;
 
-// 'dev_board' is the game board for the developers (aka us), that the player WON'T be able to see. We will be using this board
+// 'dev_board' is the game board for the developers, that the player WON'T be able to see. We will be using this board
 //  for the game logic.
 namespace dev_board
 {
